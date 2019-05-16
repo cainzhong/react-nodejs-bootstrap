@@ -24,7 +24,7 @@ module.exports = {
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        loader: 'url-loader?limit=100000'
+        loader: 'url-loader'
       }
     ]
   },
@@ -36,6 +36,7 @@ module.exports = {
     historyApiFallback: true,
     port: 3000,
     hot: true,
+    open: true,
     proxy: {
       '/api': 'http://localhost:8080'
     }
